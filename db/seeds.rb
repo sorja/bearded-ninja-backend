@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts 'CREATING IMAGES'
-Image.create :name => "Kuva1", :imageUrl => "kuvan1_url", :views => 5
-Image.create :name => "Kuva2", :imageUrl => "kuvan2_url", :views => 15
-Image.create :name => "Kuva3", :imageUrl => "kuvan3_url", :views => 25
-Image.create :name => "Kuva4", :imageUrl => "kuvan4_url", :views => 2
+Image.create :name => "Kuva1", :imageUrl => "http://pics.kuvaton.com/kuvei/capture_the_moment42.jpg", :views => 5
+Image.create :name => "Kuva2", :imageUrl => "http://pics.kuvaton.com/kuvei/but_why_else_would_i_go_to_a_hotel.jpg", :views => 15
+Image.create :name => "Kuva3", :imageUrl => "http://pics.kuvaton.com/kuvei/aukioloajat2.jpg", :views => 25
+Image.create :name => "Kuva4", :imageUrl => "http://pics.kuvaton.com/kuvei/angel.jpg", :views => 2

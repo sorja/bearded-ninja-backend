@@ -68,3 +68,22 @@ Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-08 16:31:20 +030
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-08 16:31:20 +0300
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-08 14:32:51.002016"], ["imageUrl", "http://pics.kuvaton.com/kuvei/capture_the_moment42.jpg"], ["name", "Kuva1"], ["updated_at", "2014-05-08 14:32:51.002016"], ["views", 5]]
+  [1m[35m (11.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-08 14:32:51.015507"], ["imageUrl", "http://pics.kuvaton.com/kuvei/but_why_else_would_i_go_to_a_hotel.jpg"], ["name", "Kuva2"], ["updated_at", "2014-05-08 14:32:51.015507"], ["views", 15]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-08 14:32:51.027522"], ["imageUrl", "http://pics.kuvaton.com/kuvei/aukioloajat2.jpg"], ["name", "Kuva3"], ["updated_at", "2014-05-08 14:32:51.027522"], ["views", 25]]
+  [1m[35m (20.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-08 14:32:51.048601"], ["imageUrl", "http://pics.kuvaton.com/kuvei/angel.jpg"], ["name", "Kuva4"], ["updated_at", "2014-05-08 14:32:51.048601"], ["views", 2]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
