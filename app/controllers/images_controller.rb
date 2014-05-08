@@ -26,6 +26,16 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
+    @information = Cloudinary::Uploader.upload('/home/joe/bearded-ninja-backend/app/assets/images/kuva2.jpg')
+    ind = 0
+    @information.each do |i|
+       if ind == 11
+           @url = i[1]
+       end  
+    ind = ind + 1
+    end
+    @image.imageUrl = @url
+
     respond_to do |format|
       if @image.save
         format.html { redirect_to @image, notice: 'Image was successfully created.' }

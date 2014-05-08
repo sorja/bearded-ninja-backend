@@ -38,6 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# For debugging
+#gem 'byebug', group: [:development, :test]
+
 
 group :development, :test do
   gem 'sqlite3'
