@@ -1,6 +1,5 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-  skip_before_filter  :verify_authenticity_token
 
   # GET /images
   # GET /images.json
@@ -27,8 +26,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
-    #@information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
-  #     @information = Cloudinary::Uploader.upload(image_params[:file])
+    @information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
     ind = 0
     @information.each do |i|
        if ind == 11
@@ -36,10 +34,7 @@ class ImagesController < ApplicationController
        end  
     ind = ind + 1
     end
-    #@image.imageUrl = @url
-    @image.imageUrl = "noniin"
-    @image.name = "asd"
-    @image.views = 1
+    @image.imageUrl = @url
 
     respond_to do |format|
       if @image.save
@@ -84,7 +79,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-     # params.require(:image).permit(:name, :imageUrl, :views)
-      params.require(:image).permit(:file)
+      params.require(:image).permit(:name, :imageUrl, :views)
     end
 end
