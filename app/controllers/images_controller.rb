@@ -26,7 +26,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
-    @information = Cloudinary::Uploader.upload('/home/joe/bearded-ninja-backend/app/assets/images/kuva2.jpg')
+    @information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
     ind = 0
     @information.each do |i|
        if ind == 11

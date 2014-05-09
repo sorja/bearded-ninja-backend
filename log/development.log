@@ -2718,3 +2718,289 @@ Processing by ImagesController#index as HTML
   [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
   Rendered images/index.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (14.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (16.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (2.9ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (18.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-09 10:25:32.104375"], ["imageUrl", "http://pics.kuvaton.com/kuvei/capture_the_moment42.jpg"], ["name", "Kuva1"], ["updated_at", "2014-05-09 10:25:32.104375"], ["views", 5]]
+  [1m[35m (9.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-09 10:25:32.135208"], ["imageUrl", "http://pics.kuvaton.com/kuvei/but_why_else_would_i_go_to_a_hotel.jpg"], ["name", "Kuva2"], ["updated_at", "2014-05-09 10:25:32.135208"], ["views", 15]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.7ms)[0m  [1mINSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-09 10:25:32.152240"], ["imageUrl", "http://pics.kuvaton.com/kuvei/aukioloajat2.jpg"], ["name", "Kuva3"], ["updated_at", "2014-05-09 10:25:32.152240"], ["views", 25]]
+  [1m[35m (10.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-09 10:25:32.170576"], ["imageUrl", "http://pics.kuvaton.com/kuvei/angel.jpg"], ["name", "Kuva4"], ["updated_at", "2014-05-09 10:25:32.170576"], ["views", 2]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 13:26:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/railties-4.1.1/lib/rails/templates/rails/welcome/index.html.erb (10.4ms)
+Completed 200 OK in 230ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2014-05-09 13:26:24 +0300
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 1222ms (Views: 1210.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 13:26:25 +0300
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-05-09 13:26:28 +0300
+Processing by ImagesController#new as HTML
+  Rendered images/_form.html.erb (123.7ms)
+  Rendered images/new.html.erb within layouts/application (182.2ms)
+Completed 200 OK in 235ms (Views: 234.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-05-09 13:26:32 +0300
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow6iEfTzk0qv8O0hsBwY6hzyiYiR4idN0XybtnFd70M=", "image"=>{"name"=>"dassf", "imageUrl"=>"asfas", "views"=>"4"}, "commit"=>"Create Image"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-09 10:26:34.702812"], ["imageUrl", "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg"], ["name", "dassf"], ["updated_at", "2014-05-09 10:26:34.702812"], ["views", 4]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/images/5
+Completed 302 Found in 2322ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/images/5" for 127.0.0.1 at 2014-05-09 13:26:34 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mImage Load (3.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered images/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-05-09 13:27:10 +0300
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow6iEfTzk0qv8O0hsBwY6hzyiYiR4idN0XybtnFd70M=", "image"=>{"name"=>"dadgsgsd", "imageUrl"=>"asfasf", "views"=>"4"}, "commit"=>"Create Image"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.0ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-09 10:27:11.496709"], ["imageUrl", "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631231/bzu5hhwkp8jv5rwua9g9.jpg"], ["name", "dadgsgsd"], ["updated_at", "2014-05-09 10:27:11.496709"], ["views", 4]]
+  [1m[36m (23.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/images/6
+Completed 302 Found in 1141ms (ActiveRecord: 32.3ms)
+
+
+Started GET "/images/6" for 127.0.0.1 at 2014-05-09 13:27:11 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mImage Load (8.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered images/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 54.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/images/" for 127.0.0.1 at 2014-05-09 13:28:25 +0300
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 78ms (Views: 67.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:25 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:25 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:26 +0300
+
+
+Started GET "/images/1" for 127.0.0.1 at 2014-05-09 13:28:43 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mImage Load (1.6ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered images/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:43 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:43 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 13:28:43 +0300
+
+
+Started GET "/images/1.json" for 127.0.0.1 at 2014-05-09 13:28:49 +0300
+Processing by ImagesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered images/show.json.jbuilder (153.2ms)
+Completed 200 OK in 201ms (Views: 199.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-05-09 13:29:46 +0300
+Processing by ImagesController#new as HTML
+  Rendered images/_form.html.erb (3.8ms)
+  Rendered images/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 122ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-05-09 13:29:50 +0300
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow6iEfTzk0qv8O0hsBwY6hzyiYiR4idN0XybtnFd70M=", "image"=>{"name"=>"asfas", "imageUrl"=>"asffga", "views"=>"2"}, "commit"=>"Create Image"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-09 10:29:51.733087"], ["imageUrl", "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631391/dtnprjbryg7mfkaohunx.jpg"], ["name", "asfas"], ["updated_at", "2014-05-09 10:29:51.733087"], ["views", 2]]
+  [1m[35m (33.4ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/images/7
+Completed 302 Found in 1379ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/images/7" for 127.0.0.1 at 2014-05-09 13:29:51 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mImage Load (7.5ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered images/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 13:29:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 13:29:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:29:51 +0300
+
+
+Started GET "/images" for 127.0.0.1 at 2014-05-09 13:30:09 +0300
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (5.9ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/images/new" for 127.0.0.1 at 2014-05-09 13:30:11 +0300
+Processing by ImagesController#new as HTML
+  Rendered images/_form.html.erb (3.3ms)
+  Rendered images/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2014-05-09 13:30:14 +0300
+Processing by ImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ow6iEfTzk0qv8O0hsBwY6hzyiYiR4idN0XybtnFd70M=", "image"=>{"name"=>"gasg", "imageUrl"=>"21as", "views"=>"2"}, "commit"=>"Create Image"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  INSERT INTO "images" ("created_at", "imageUrl", "name", "updated_at", "views") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-05-09 10:30:15.863476"], ["imageUrl", "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631415/luhhfdxlk3wbgutitezl.jpg"], ["name", "gasg"], ["updated_at", "2014-05-09 10:30:15.863476"], ["views", 2]]
+  [1m[36m (19.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/images/8
+Completed 302 Found in 1150ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/images/8" for 127.0.0.1 at 2014-05-09 13:30:15 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mImage Load (8.0ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered images/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 16.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 13:30:16 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 13:30:16 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 13:30:16 +0300
+
+
+Started GET "/api/edges" for 127.0.0.1 at 2014-05-09 13:39:14 +0300
+
+ActionController::RoutingError (No route matches [GET] "/api/edges"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (236.5ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1289.1ms)
+
+
+Started GET "/api/edges" for 127.0.0.1 at 2014-05-09 13:39:23 +0300
+
+ActionController::RoutingError (No route matches [GET] "/api/edges"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/joeniemi/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.5ms)
