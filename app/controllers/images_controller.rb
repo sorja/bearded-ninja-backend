@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter  :verify_authenticity_token
+  
   # GET /images
   # GET /images.json
   def index
@@ -36,6 +37,8 @@ class ImagesController < ApplicationController
     ind = ind + 1
     end
     @image.imageUrl = @url
+    @image.name = "asd"
+    @image.views = 1
 
     respond_to do |format|
       if @image.save
