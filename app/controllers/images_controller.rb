@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
-  
+
   # GET /images
   # GET /images.json
   def index
@@ -28,7 +28,7 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
 
     #@information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
-    @information = Cloudinary::Uploader.upload(image_params[:file])
+  #     @information = Cloudinary::Uploader.upload(image_params[:file])
     ind = 0
     @information.each do |i|
        if ind == 11
@@ -36,7 +36,8 @@ class ImagesController < ApplicationController
        end  
     ind = ind + 1
     end
-    @image.imageUrl = @url
+    #@image.imageUrl = @url
+    @image.imageUrl = "noniin"
     @image.name = "asd"
     @image.views = 1
 
