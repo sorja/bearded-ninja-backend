@@ -28,9 +28,9 @@ class ImagesController < ApplicationController
     @image = Image.new #(image_params)
 
     #if testing local:
-    #@information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
+    @information = Cloudinary::Uploader.upload('/home/joe/bearded-ninja-backend/app/assets/images/kuva4.jpg')
     
-    @information = Cloudinary::Uploader.upload(params[:file])
+  #  @information = Cloudinary::Uploader.upload(params[:file])
     ind = 0
     @information.each do |i|
        if ind == 11
@@ -39,7 +39,10 @@ class ImagesController < ApplicationController
     ind = ind + 1
     end
     @image.imageUrl = @url
-    @image.name = 1337 + create_10_random_numbers() + @image.id
+    begin
+       @name = "bn" + create_10_random_numbers() + @image.id.to_s
+    end while Image.where(:name => @name).first != nil
+    @image.name = @name
     @image.views = 0
 
     respond_to do |format|
@@ -89,6 +92,6 @@ class ImagesController < ApplicationController
     end
 
     def create_10_random_numbers
-        return "" + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9)
+        return "" + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s + rand(1..9).to_s
     end
 end
