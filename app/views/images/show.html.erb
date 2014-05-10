@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @image.name %>
-</p>
+
+<h1>Name: <%= @image.name %></h1>
 
 <p>
-  <strong>Imageurl:</strong>
-  <%= @image.imageUrl %>
+  <strong>Imageurl: </strong> <%= link_to @image.imageUrl, @image.imageUrl %>
 </p>
 
 <p>
   <strong>Views:</strong>
   <%= @image.views %>
 </p>
+
+<h2><b>Comments:</b></h2>
+<% @comments.each do |comment| %>
+   <b>Name: </b><%= comment.name %>
+   <b>Comment: </b><%= comment.comment %>
+</br>
+<% end %>
+
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>

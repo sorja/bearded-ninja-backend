@@ -29,6 +29,8 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     aws_cf_signer (0.1.2)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.2.2)
     cloudinary (1.0.72)
       aws_cf_signer
@@ -76,6 +78,7 @@ GEM
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_layout (1.0.14)
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
     railties (4.1.1)
@@ -127,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   cloudinary
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
@@ -135,6 +139,7 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.1)
   rails_12factor
+  rails_layout
   rb-readline
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
