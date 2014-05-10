@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# to get byebug working
+gem 'rb-readline'
+
 # For uploading images
 gem 'cloudinary'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

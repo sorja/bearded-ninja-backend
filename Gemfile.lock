@@ -84,6 +84,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.1)
+    rb-readline (0.5.1)
     rdoc (4.1.1)
       json (~> 1.4)
     rest-client (1.6.7)
@@ -134,6 +135,7 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.1)
   rails_12factor
+  rb-readline
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
