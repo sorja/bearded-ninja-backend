@@ -29,9 +29,9 @@ class ImagesController < ApplicationController
     @image = Image.new #(image_params)
 
     #if testing local:
-    @information = Cloudinary::Uploader.upload('/home/joe/bearded-ninja-backend/app/assets/images/kuva4.jpg')
+   # @information = Cloudinary::Uploader.upload('/home/joe/bearded-ninja-backend/app/assets/images/kuva4.jpg')
     
-  #  @information = Cloudinary::Uploader.upload(params[:file])
+    @information = Cloudinary::Uploader.upload(params[:file])
     ind = 0
     @information.each do |i|
        if ind == 11
