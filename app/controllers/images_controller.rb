@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
 
 
     #@information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
-    @information = Cloudinary::Uploader.upload(params)
+    @information = Cloudinary::Uploader.upload(params[:file])
     ind = 0
     @information.each do |i|
        if ind == 11
