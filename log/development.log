@@ -15845,3 +15845,4 @@ Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +030
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
