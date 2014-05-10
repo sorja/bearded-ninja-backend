@@ -41,7 +41,7 @@ class ImagesController < ApplicationController
     end
     @image.imageUrl = @url
     begin
-       @name = "bn" + create_10_random_numbers() + @image.id.to_s
+       @name = "BN-" + create_10_random_numbers() + @image.id.to_s
     end while Image.where(:name => @name).first != nil
     @image.name = @name
     @image.views = 0
