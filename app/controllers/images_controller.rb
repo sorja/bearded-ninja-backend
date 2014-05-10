@@ -27,8 +27,9 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new #(image_params)
 
-
+    #if testing local:
     #@information = Cloudinary::Uploader.upload('/home/joeniemi/bearded-ninja-backend/app/assets/images/kuva4.jpg')
+    
     @information = Cloudinary::Uploader.upload(params[:file])
     ind = 0
     @information.each do |i|
@@ -38,7 +39,8 @@ class ImagesController < ApplicationController
     ind = ind + 1
     end
     @image.imageUrl = @url
-
+    @image.name = 1337 + create_10_random_numbers() + @image.id
+    @image.views = 0
 
     respond_to do |format|
       if @image.save
@@ -84,5 +86,9 @@ class ImagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
      # params.require(:image).permit(:file)
+    end
+
+    def create_10_random_numbers
+        return "" + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9) + rand(1..9)
     end
 end

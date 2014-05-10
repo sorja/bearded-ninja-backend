@@ -3196,3 +3196,5 @@ Processing by ImagesController#index as JSON
   [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images"[0m
   Rendered images/index.json.jbuilder (6.2ms)
 Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"   ORDER BY "images"."id" ASC LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 4]]
