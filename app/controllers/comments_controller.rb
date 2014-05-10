@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_with_token, only:[:destroy]
   # GET /comments
   # GET /comments.json
   def index
@@ -69,6 +69,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.permit(:comment, :name, :image_id)
+      params.require(:comment).permit(:comment, :name, :image_id)
     end
 end
