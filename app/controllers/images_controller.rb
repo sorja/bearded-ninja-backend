@@ -38,7 +38,7 @@ class ImagesController < ApplicationController
     ind = ind + 1
     end
     @image.imageUrl = @url
-    
+
 
     respond_to do |format|
       if @image.save
@@ -83,6 +83,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:file)
+     # params.require(:image).permit(:file)
     end
 end
