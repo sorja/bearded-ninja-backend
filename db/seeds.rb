@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts 'CREATING IMAGES'
-Image.create :name => "bn9694367517", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg", :views => 0
-Image.create :name => "bn2529285626", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0
-Image.create :name => "bn8558428913", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631391/dtnprjbryg7mfkaohunx.jpg", :views => 0
-Image.create :name => "bn9122121768", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0
+Image.create :name => "BN-9694367517", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg", :views => 0
+Image.create :name => "BN-2529285626", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0
+Image.create :name => "BN-8558428913", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631391/dtnprjbryg7mfkaohunx.jpg", :views => 0
+Image.create :name => "BN-9122121768", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0
 
 puts 'CREATING COMMENTS'
 
