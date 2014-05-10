@@ -15707,3 +15707,141 @@ Processing by CommentsController#index as JSON
   [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
   Rendered comments/index.json.jbuilder (1.4ms)
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+
+
+Started GET "/comments.json" for 127.0.0.1 at 2014-05-11 02:30:12 +0300
+Processing by CommentsController#index as JSON
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"
+  Rendered comments/index.json.jbuilder (2.9ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:13 +0300
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2014-05-11 02:30:19 +0300
+Processing by CommentsController#new as HTML
+  Rendered comments/_form.html.erb (8.5ms)
+  Rendered comments/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2014-05-11 02:30:26 +0300
+Processing by CommentsController#new as HTML
+  Rendered comments/_form.html.erb (3.1ms)
+  Rendered comments/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:27 +0300
+
+
+Started POST "/comments" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68Tcor2/Xqz04OQRF61VTHDZKstrPJaTF9XX21JXn18=", "comment"=>{"comment"=>"safsafsa", "name"=>"sfasfa", "image_id"=>"2"}, "commit"=>"Create Comment"}
+Unpermitted parameters: utf8, authenticity_token, comment, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-05-10 23:30:30.044680"], ["updated_at", "2014-05-10 23:30:30.044680"]]
+  [1m[35m (25.4ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/comments/7
+Completed 302 Found in 29ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/comments/7" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered comments/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 02:30:30 +0300
