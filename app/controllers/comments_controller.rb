@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @comment.name = params[:name]
     @comment.comment = params[:comment]
-    @comment.image_id = params[:image_id]
+    @comment.image_id = params[:id]
 
     respond_to do |format|
       if @comment.save
