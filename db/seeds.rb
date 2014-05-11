@@ -20,3 +20,9 @@ Comment.create :comment => "onpas hieno", :name => "hieno_mies", :image_id => 2
 Comment.create :comment => "5/5", :name => "Salami", :image_id => 2
 Comment.create :comment => "onks tää se irkki", :name => "Jenni95", :image_id => 3
 Comment.create :comment => "mitä tämä on?", :name => "Lauri Tähkä", :image_id => 4
+
+puts 'CREATING USERS'
+User.create username:"Div", password:"AAA1", password_confirmation:"AAA1"
+User.create username:"Dov", password:"AAA1", password_confirmation:"AAA1"
+User.create username:"Dev", password:"AAA1", password_confirmation:"AAA1"
+
