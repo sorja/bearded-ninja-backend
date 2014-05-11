@@ -1,0 +1,7 @@
+<%# add navigation links to this file %>
+<% if not current_user.nil? %>
+    <li><%= link_to 'Signout', signout_path, method: :delete %></li>
+<% else %>
+    <li><%= link_to 'Signin', signin_path %></li>
+    <li><%= link_to 'Signup', signup_path %></li>
+<% end %>    

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # to get byebug working
 gem 'rb-readline'
 
+#To encrypt password:
+gem 'bcrypt-ruby', '~> 3.1.2'
+
 # For uploading images
 gem 'cloudinary'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

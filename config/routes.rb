@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :comments
+
+  resources :sessions, only: [:new, :create]
 
   #scope(:path => '/api') do
   resources :images
+
+  root :to => 'images#index'
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  get 'signin', to: 'sessions#new'
+  delete 'signout', to: 'sessions#destroy'
+  get 'signup', to: 'users#new'
   #end
 
 
