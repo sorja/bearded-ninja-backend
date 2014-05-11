@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts 'CREATING IMAGES'
-Image.create :name => "Dead fish", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg", :views => 0, :tags => "#yolo #summer #fish", :mature => false, :generated_id => "BN-9694367517"
-Image.create :name => "Sandfishing", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0, :tags => "#go_fishing #fake", :mature => false, :generated_id => "BN-2529285626"
-Image.create :name => "Moosetree", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399824993/dfctoxxsboaayusmerbk.jpg", :views => 0, :tags => "#moose #tree", :mature => false, :generated_id => "BN-8558428913"
-Image.create :name => "Cowboyhousesign", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399826796/pqiycbrmdnfc8dxzok6c.jpg", :views => 0, :tags => "#dog #butt #cowboy #licking", :mature => true, :generated_id => "BN-9122121768"
+Image.create :name => "Dead fish", :imageUrl => "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg", :views => 0, :points => 15, :tags => "#yolo #summer #fish", :mature => false, :generated_id => "BN-9694367517"
+Image.create :name => "Sandfishing", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg", :views => 0, :points => 125, :tags => "#go_fishing #fake", :mature => false, :generated_id => "BN-2529285626"
+Image.create :name => "Moosetree", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399824993/dfctoxxsboaayusmerbk.jpg", :views => 0, :points => 5, :tags => "#moose #tree", :mature => false, :generated_id => "BN-8558428913"
+Image.create :name => "Cowboyhousesign", :imageUrl => "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399826796/pqiycbrmdnfc8dxzok6c.jpg", :views => 0, :points => 75, :tags => "#dog #butt #cowboy #licking", :mature => true, :generated_id => "BN-9122121768"
 
 puts 'CREATING COMMENTS'
 

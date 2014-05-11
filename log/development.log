@@ -28153,3 +28153,421 @@ Processing by ImagesController#index as JSON
   [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images"[0m
   Rendered images/index.json.jbuilder (3.4ms)
 Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPointsToImage (20140511172534)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140511172534"]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (20.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar(255), "name" varchar(255), "image_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (13.1ms)[0m  CREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime, "tags" varchar(255), "mature" boolean, "generated_id" varchar(255)) 
+  [1m[36m (16.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (16.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (12.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (15.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140511172534')
+  [1m[36m (11.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511095609')[0m
+  [1m[35m (17.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140510202102')
+  [1m[36m (16.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511171221')[0m
+  [1m[35m (11.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36m (16.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511165320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar(255), "name" varchar(255), "image_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime, "tags" varchar(255), "mature" boolean, "generated_id" varchar(255)) 
+  [1m[36m (11.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (13.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140511172534')
+  [1m[36m (25.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511095609')[0m
+  [1m[35m (11.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140510202102')
+  [1m[36m (11.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511171221')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36m (11.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511165320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (16.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar(255), "name" varchar(255), "image_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime, "tags" varchar(255), "mature" boolean, "generated_id" varchar(255)) 
+  [1m[36m (17.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140511172534')
+  [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511095609')[0m
+  [1m[35m (12.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140510202102')
+  [1m[36m (12.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511171221')[0m
+  [1m[35m (11.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36m (11.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511165320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPointstoImagee (20140511173242)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "images" ADD "points" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140511173242"]]
+  [1m[36m (24.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (14.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar(255), "name" varchar(255), "image_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (11.4ms)[0m  CREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "imageUrl" varchar(255), "views" integer, "created_at" datetime, "updated_at" datetime, "tags" varchar(255), "mature" boolean, "generated_id" varchar(255), "points" integer) 
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (17.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (12.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140511173242')
+  [1m[36m (12.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511095609')[0m
+  [1m[35m (12.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140510202102')
+  [1m[36m (17.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511171221')[0m
+  [1m[35m (22.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140508132820')
+  [1m[36m (11.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140511165320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "images" ("created_at", "generated_id", "imageUrl", "mature", "name", "points", "tags", "updated_at", "views") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-05-11 17:32:58.418212"], ["generated_id", "BN-9694367517"], ["imageUrl", "http://res.cloudinary.com/dv0stiwh8/image/upload/v1399631194/czdyb6zbfkuistlaogwy.jpg"], ["mature", "f"], ["name", "Dead fish"], ["points", 15], ["tags", "#yolo #summer #fish"], ["updated_at", "2014-05-11 17:32:58.418212"], ["views", 0]]
+  [1m[36m (21.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "images" ("created_at", "generated_id", "imageUrl", "mature", "name", "points", "tags", "updated_at", "views") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-11 17:32:58.442132"], ["generated_id", "BN-2529285626"], ["imageUrl", "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399743881/iy8doaarntgzbbu2ikcw.jpg"], ["mature", "f"], ["name", "Sandfishing"], ["points", 125], ["tags", "#go_fishing #fake"], ["updated_at", "2014-05-11 17:32:58.442132"], ["views", 0]]
+  [1m[35m (11.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "images" ("created_at", "generated_id", "imageUrl", "mature", "name", "points", "tags", "updated_at", "views") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-05-11 17:32:58.454824"], ["generated_id", "BN-8558428913"], ["imageUrl", "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399824993/dfctoxxsboaayusmerbk.jpg"], ["mature", "f"], ["name", "Moosetree"], ["points", 5], ["tags", "#moose #tree"], ["updated_at", "2014-05-11 17:32:58.454824"], ["views", 0]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "images" ("created_at", "generated_id", "imageUrl", "mature", "name", "points", "tags", "updated_at", "views") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-05-11 17:32:58.466713"], ["generated_id", "BN-9122121768"], ["imageUrl", "http://res.cloudinary.com/heiz7zhnc/image/upload/v1399826796/pqiycbrmdnfc8dxzok6c.jpg"], ["mature", "t"], ["name", "Cowboyhousesign"], ["points", 75], ["tags", "#dog #butt #cowboy #licking"], ["updated_at", "2014-05-11 17:32:58.466713"], ["views", 0]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "Magee kuva XD"], ["created_at", "2014-05-11 17:32:58.482044"], ["image_id", 1], ["name", "Make"], ["updated_at", "2014-05-11 17:32:58.482044"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "lol"], ["created_at", "2014-05-11 17:32:58.493681"], ["image_id", 1], ["name", "trololoo"], ["updated_at", "2014-05-11 17:32:58.493681"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "onpas hieno"], ["created_at", "2014-05-11 17:32:58.505472"], ["image_id", 2], ["name", "hieno_mies"], ["updated_at", "2014-05-11 17:32:58.505472"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "5/5"], ["created_at", "2014-05-11 17:32:58.517157"], ["image_id", 2], ["name", "Salami"], ["updated_at", "2014-05-11 17:32:58.517157"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "onks tää se irkki"], ["created_at", "2014-05-11 17:32:58.528989"], ["image_id", 3], ["name", "Jenni95"], ["updated_at", "2014-05-11 17:32:58.528989"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "image_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "mitä tämä on?"], ["created_at", "2014-05-11 17:32:58.541841"], ["image_id", 4], ["name", "Lauri Tähkä"], ["updated_at", "2014-05-11 17:32:58.541841"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'Div' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-11 17:32:58.620472"], ["password_digest", "$2a$10$q/Phx8mZM4ZGVIe4RW2BtevusluTPS5OSphJ1hTfiSAJrJJAcAwpq"], ["updated_at", "2014-05-11 17:32:58.620472"], ["username", "Div"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'Dov' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-11 17:32:58.695006"], ["password_digest", "$2a$10$v9nZO/wEJXuo0zSmHweZ.OZJ5et8L9gLg1XwhBk2E85MEyQFQDGeu"], ["updated_at", "2014-05-11 17:32:58.695006"], ["username", "Dov"]]
+  [1m[35m (16.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'Dev' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-11 17:32:58.768155"], ["password_digest", "$2a$10$2UC9j5ZhjPcr1bYR0nZZL.R6lG1hbt.79OUGtI.B6rtXKpveFfSpS"], ["updated_at", "2014-05-11 17:32:58.768155"], ["username", "Dev"]]
+  [1m[35m (16.7ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 20:33:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 20:33:36 +0300
+
+
+Started GET "/users" for 127.0.0.1 at 2014-05-11 20:33:39 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 20:33:40 +0300
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2014-05-11 20:33:42 +0300
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  Rendered comments/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 20:33:46 +0300
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/1" for 127.0.0.1 at 2014-05-11 20:33:48 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1
+  Rendered images/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 20:33:54 +0300
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 20:34:01 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (3.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 20:34:14 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (1.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 20:34:18 +0300
+
+
+Started GET "/images/1" for 127.0.0.1 at 2014-05-11 20:34:21 +0300
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1
+  Rendered images/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/1.json" for 127.0.0.1 at 2014-05-11 20:34:25 +0300
+Processing by ImagesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1
+  Rendered images/show.json.jbuilder (1.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/1.json" for 127.0.0.1 at 2014-05-11 20:35:42 +0300
+Processing by ImagesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."image_id" = 1
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1[0m
+  Rendered images/show.json.jbuilder (5.0ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/1.json" for 127.0.0.1 at 2014-05-11 20:36:12 +0300
+Processing by ImagesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images"  WHERE "images"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."image_id" = 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1
+  Rendered images/show.json.jbuilder (1.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)

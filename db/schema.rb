@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511171221) do
+ActiveRecord::Schema.define(version: 20140511173242) do
 
   create_table "comments", force: true do |t|
     t.string   "comment"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140511171221) do
     t.string   "tags"
     t.boolean  "mature"
     t.string   "generated_id"
+    t.integer  "points"
   end
 
   create_table "users", force: true do |t|
