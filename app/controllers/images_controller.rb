@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
   # GET /images/1.json
   def show
     @comments = Comment.where(:image_id => params[:id])
+    @images = Image.all
   end
 
   # GET /images/new
@@ -41,9 +42,12 @@ class ImagesController < ApplicationController
     end
     @image.imageUrl = @url
     begin
-       @name = "BN-" + create_10_random_numbers() + @image.id.to_s
-    end while Image.where(:name => @name).first != nil
-    @image.name = @name
+       @generatedID = "BN-" + create_10_random_numbers() + @image.id.to_s
+    end while Image.where(:generated_id => @generatedID).first != nil
+    @image.generated_id = @generatedID
+    @image.name = params[:imgName]
+    @image.tags = params[:imgTags]
+    @image.mature = params[:imgMature]
     @image.views = 0
 
     respond_to do |format|

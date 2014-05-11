@@ -28571,3 +28571,435 @@ Processing by ImagesController#show as JSON
   [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."image_id" = 1
   Rendered images/show.json.jbuilder (1.3ms)
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ImagesController#index as HTML
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 119ms (Views: 109.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 22:46:56 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-11 22:46:58 +0300
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:47:04 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (3.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.image_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874685711900'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.6ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:47:29 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (1.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `to_I' for 4:Fixnum):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.image_amount @images.size.to_I
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874711541140'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.5ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:47:36 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (1.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `to_S' for 4:Fixnum):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.image_amount @images.size.to_S
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874709413020'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.5ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:47:44 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (1.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.image_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874708324440'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.9ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:49:25 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (5.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:49:45 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (8.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `images_amount' for #<#<Class:0x007f19efa47bc0>:0x007f19f227ef58>):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: images_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874706803840'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.1ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:51:00 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.extract! json.images_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874705079880'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.7ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:51:59 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (1.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1+)):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.extract!
+    6: json.images_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874694188460'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.5ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:52:04 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (1.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.images_amount @images.size
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874686130280'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.5ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+Processing by ImagesController#index as HTML
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/images.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/images.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 22:52:31 +0300
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:52:56 +0300
+Processing by ImagesController#index as JSON
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "images"
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (2.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:55:48 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (1.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:55:49 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:55:56 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.images_amount 5
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874705866880'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.5ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:56:00 +0300
+Processing by ImagesController#index as JSON
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  Rendered images/index.json.jbuilder (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.images_amount "5"
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874704881400'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.8ms)
+
+
+Started GET "/images.json" for 127.0.0.1 at 2014-05-11 22:56:07 +0300
+Processing by ImagesController#index as JSON
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images"
+  Rendered images/index.json.jbuilder (1.4ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    2:   json.extract! image, :id, :name, :imageUrl, :views, :tags, :points, :mature, :generated_id, :created_at
+    3:   json.url image_url(image, format: :json)
+    4: end
+    5: json.images_amount "5"
+  app/views/images/index.json.jbuilder:5:in `_app_views_images_index_json_jbuilder___1144218649683164015_69874704881400'
+
+
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/joe/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (6.6ms)
